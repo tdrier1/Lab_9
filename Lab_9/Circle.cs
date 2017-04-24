@@ -16,9 +16,9 @@ namespace Lab__9
 
         public Circle(double radius)
         {
-            diameter = 0;
-            circumference = 0;
-            area = 0;
+            diameter = 2 * (radius);//performs calc and sends diameter to other class
+            circumference = getCircumference(diameter);
+            area = getArea(radius);
         }
 
         public static double getCircumference(double diameter)
@@ -28,7 +28,7 @@ namespace Lab__9
             return circumference;
         }
 
-        public static string getFormattedCircumference(double circumference)
+        public string getFormattedCircumference()
         {
 
             string CircForm = circumference.ToString("0.##");
@@ -43,7 +43,7 @@ namespace Lab__9
             return area;
         }
 
-        public static string getFormattedArea(double area)
+        public string getFormattedArea()
         {
 
             string areaForm = area.ToString("0.##");

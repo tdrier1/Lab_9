@@ -43,14 +43,13 @@ namespace Lab__9
 
         public static void getCalculations(double radius, List<Circle> CircList)
         {
-            double diameter = 2 * (radius);//performs calc and sends diameter to other class
 
             Circle cirCalc = new Circle(radius);//creates a new circle object
 
             CircList.Add(cirCalc);//adds circle obj to list
 
-            Console.WriteLine("\nCircumference: " + Circle.getFormattedCircumference(Circle.getCircumference(diameter)));//prints cicle data to the console by calling methods in other class
-            Console.WriteLine("\nArea: " + Circle.getFormattedArea(Circle.getArea(radius)));
+            Console.WriteLine("\nCircumference: " + CircList.Last().getFormattedCircumference());//prints cicle data to the console by calling methods in other class
+            Console.WriteLine("\nArea: " + CircList.Last().getFormattedArea());
         }
 
         public static bool Continue(List<Circle> CircList)//standard loop to prompt user to continue with validation
